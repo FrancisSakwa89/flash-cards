@@ -20,7 +20,7 @@ from django.shortcuts import get_object_or_404
 # @login_required(login_url='/accounts/login/')
 def welcome(request):
   id = request.user.id
-  profile = Profile.objects.get(user=id)
+#   profile = Profile.objects.get(user=id)
 
 
-  return render(request, 'index.html',{'profile':profile})
+  return render(request, 'index.html')
