@@ -13,18 +13,22 @@
 <div class="col-sm-4" style="margin-bottom: 2em;">
     <div class="card bg-dark">
       <div class="card-body">    
-        <h5 class="card-header">{{card.name}}</h5>
-        <h5 class="card-text firstletter">{{ card.card | truncatechars:450 }}</h5>
-        <p style="font-style:italic;text-decoration:underline">carded by: {{card.owner}}</p>
+        <h5 class="card-header">{{card.title}}</h5>
+        <h5 class="card-text firstletter">{{ card.notes| truncatechars:450 }}</h5>
+        <p>Date created: {{card.pub_date}} </p>
+        <p style="font-style:italic;text-decoration:underline">carded by: {{card.user}}</p>
 
     </div>
   </div>
 </div>
   <br>
+
 {% endfor %}
+{%else%}
+<h4 style="text-align:center">Add cards <a href="{% url 'newcard' %}">here</a>.</h4>
 {% endif %}
 </div>
-<h4 style="text-align:center">Add cards <a href="{% url 'newcard' %}">here</a>.</h4>
+<h4 style="text-align:center">Add More cards <a href="{% url 'newcard' %}">here</a>.</h4>
 
 <br>
   <br>

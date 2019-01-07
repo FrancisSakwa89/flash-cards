@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>New card</title>
+  <title>Update Profile</title>
   {{form.media}}
 
 {% block styles %} {% bootstrap_css %}
@@ -17,24 +17,26 @@
 
 <body>
   {% include 'navbar.html' %}
-<div class="jumbotron">
+  <div class="jumbotron">
         <style>
                 .jumbotron {
                     background: linear-gradient(to right, #16222a, #3a6073);
                     background-size: cover;
                     color: whitesmoke;
                 }
-        </style>        
-
-    <div class="intro">
-        <h2  style="margin-right:30%;margin-left:20%">New card</h2>
-      </div>
-<hr>
-  <form  action="{%url 'newcard'%}" method="post"  style="margin-right:30%;margin-left:20%">
+                h2{
+                    text-align: center;
+                }
+            </style>
+      <div class="intro">
+          <h2  style="margin-right:30%;margin-left:20%">Update Profile</h2>
+        </div>
+  <hr>
+  <form  action="{%url 'newprofile' %}" method="post" enctype="multipart/form-data" style="margin-right: 30%;margin-left: 10%"  style="margin-right:30%;margin-left:20%">
     {%csrf_token%}
 
     {% bootstrap_form form%}
-    <input type="submit" class="btn btn-success btn-lg" value="Add card">
+    <input type="submit" class="btn btn-success btn-lg" value="Update Profile">
   </form>
 
   {% block scripts %}

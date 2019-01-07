@@ -7,25 +7,11 @@ from . import views
 
 urlpatterns=[
     url('^$',views.welcome,name = 'welcome'),
-    # url(r'^contacts/', views.contacts, name='contacts'),
-    # url(r'^search/', views.search,name = 'search'),
     url(r'^new/card$',views.newcard, name='newcard'),
-    # url(r'^profile/(\d+)', views.profile, name='profile'),
-    url(r'^card/(\d+)', views.card, name='card'),
-    # url(r'^new/business/',views.newbusiness, name='newbusiness'), 
-    # url(r'^new/profile$',views.newprofile, name='newprofile'),
-    # url(r'^new/comment/(\d+)',views.newcomment, name='newcomment'), 
-    # url(r'^new/post$',views.newpost, name='newpost'),
-    # url(r'^mail$',views.mail,name='mail'),
-    # # url(r'^api/business/$', views.BusinessList.as_view()),
-    # url(r'^subscribe/', views.subscribe, name='subscribe'),
-    # url(r'^business$', views.business,name = 'business'),
-    # url(r'^myneighbourhood/', views.myneighbourhood, name='myneighbourhood'),
-    # url(r'^password/', views.password, name='password'),
-    # url(r'^new/contacts/',views.newcontacts, name='newcontacts'), 
-    # url(r'^post/(\d+)', views.post, name='post'),
-    # url(r'^mypost/', views.mypost, name='mypost'),
-
+    url(r'^profile/(\d+)', views.profile, name='profile'), 
+    url(r'^new/profile$',views.newprofile, name='newprofile'),
+    url(r'^new/card$',views.newcard, name='newcard'),
+    url(r'^card/', views.card, name='card'),
 
 ]    
 

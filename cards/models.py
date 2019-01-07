@@ -9,7 +9,7 @@ from django.dispatch import receiver
 class Profile(models.Model):
   photo = models.ImageField(upload_to = 'photos/')
   bio = models.CharField(max_length=200)
-  owner = models.ForeignKey(owner, on_delete=models.CASCADE,blank=True,null=True)
+#   card = models.ForeignKey(Card, on_delete=models.CASCADE,blank=True,null=True)
   user = models.OneToOneField(User, on_delete=models.CASCADE)
 
   @receiver(post_save, sender=User)
@@ -32,7 +32,7 @@ class Profile(models.Model):
 class Card(models.Model):
   title = models.CharField(max_length=60)
   notes = models.TextField()
-  owner = models.ForeignKey(owner, on_delete=models.CASCADE)
+#   owner = models.ForeignKey(owner, on_delete=models.CASCADE)
   pub_date = models.DateTimeField(auto_now_add=True)
-  user = models.OneToOneField(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE)
 
