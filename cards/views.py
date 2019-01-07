@@ -52,4 +52,4 @@ def Newcard(request):
   else:
     form = NewcardForm()
 
-  return render(request, 'Newcard.html',{'form':form,'profile':profile})
+  return render(request, 'newcard.html',{'form':form,'profile':profile})
