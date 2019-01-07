@@ -1,0 +1,29 @@
+{% extends 'registration/base.html'%}
+{% load bootstrap4%}
+{% block content %}
+   <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 pt-5">
+          <div class="card ">
+            <div class="card-header">
+              <h3>Please Login to continue</h3>
+            </div>
+            <div class="card-body">
+              <form action="/" method="POST">
+                {% csrf_token%}
+                {% bootstrap_form form%}
+                <div class="d-inline">
+                <input type="submit" class="btn btn-outline-primary" name="" value='Login'>
+                <input type="hidden" name="next" value="">
+                <p><a href="/accounts/register">Register an account</a></p>
+                </div>
+                
+            </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+   </div>
+{% endblock %}
