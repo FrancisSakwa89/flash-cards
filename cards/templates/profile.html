@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="intro">
+        <h2>Your Profile</h2>
+      </div>
+<hr>
+{% if profile.bio %}
+<div id='user-details'>
+    <p><img class="circular" src="{{profile.photo.url}}" alt="Avatar" style="border-radius: 50%;"><span class="repo-owner firstletter" style="padding:1.5em;font-size: 2em">{{user.username}}</span>
+    </p>
+    <p>
+      <!-- <span class='repo-owner' style=>cards: </span>{{cardcount}} -->
+    </p>
+</div>
+    {{profile.bio}}
+    <p></p>
+    <span><a class='maillink' href="mailto:{{profile.contact}}" style="color: whitesmoke">{{profile.contact}}</a></span>
+    <p></p>
+    <h5 class="card-title firstletter">{{card.name}}</h5>
+    <a href="{% url 'newprofile' %}"><button type="button" class="btn btn-info">Update Profile</button></a>   
+    <br>
+    <br>
+ {% else %}
+ <p></p>
+    <a href="{% url 'newprofile' %}"><button type="button" class="btn btn-info">Update Profile</button></a>   
+    <br>
+    <br>
+  {% endif %}
+      
+{% endblock %}

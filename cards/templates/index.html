@@ -1,0 +1,189 @@
+{% extends "base.html" %} {% load bootstrap4 %} {% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Flash</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+
+    
+
+</head>
+
+<body>
+        <!-- /.Navbar -->
+    </header>
+    
+    <!--Main layout-->
+    <main>
+            <div class="animated  flash">
+                    <h1 style="text-align:center;font-family: 'Major Mono Display', monospace;"><a href="{% url 'welcome' %}" style="color:white">FLASHCARDS</a></h1>
+            </div>
+        <div class="container-fluid text-center">
+
+            <!--Card-->
+            <div class="card card-cascade wider reverse my-4 pb-5">
+
+                <!--Card image-->
+                <div class="view view-cascade overlay wow fadeIn">
+                        <section id="me" class="jumbotron text-center" style="color:black">
+                                <div class="container" style="color:black">
+                                  <h1 class="jumbotron-heading">This Is</h1>
+                                  <p class="lead" style="font-size:2em;color:black">FLASH-CARD APP</p>
+                                  <hr>
+                                  <hr>
+                                  
+                                </div>
+                                  <h2 id="mainText" class="center" style="color:whitesmoke">WE ARE READY TO HOST YOU</h2>
+                                  
+                              </div>
+                              </div>
+                              </section>                    <a href="{% url 'welcome'%}">
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+                <!--/Card image-->
+
+                <!--Card content-->
+        
+                <div class="card-body card-body-cascade text-center wow fadeIn" data-wow-delay="0.2s" style="background-color:skyblue">
+                    <!--Title-->
+                    <h4 class="card-title" style="color:black"><strong>FLASH-CARD COURSES</strong></h4>
+                    
+
+                        
+
+                </div>
+                <!--/.Card content-->
+
+            </div>
+            <!--/.Card-->
+        
+        </div>
+        
+    </main>
+
+    <!--/Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center text-md-left pt-4">
+
+        <!--Footer Links-->
+        <div class="container-fluid">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-md-3">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Explore Today</h5>
+                    <p>The following are our categories.</p>
+                </div>
+                <!--/.First column-->
+
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4">JavaScript</h5>
+                    <ul class="list-unstyled">
+                        <li><a  href="{% url 'card' %}" style="color:green">Cards</a></li>
+                        </ul>
+                </div>
+
+                <div class="col-md-2 mx-auto">
+                        <h5 class="text-uppercase font-weight-bold mb-4">Angular Js</h5>
+                        <ul class="list-unstyled">
+                            
+                        </ul>
+                    </div>
+                <!--/.Second column-->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!--Third column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4">Python Flask</h5>
+                    <ul class="list-unstyled">
+                        
+                    </ul>
+                </div>
+                <!--/.Third column-->
+
+                <hr class="w-100 clearfix d-md-none">
+
+                <!--Fourth column-->
+                <div class="col-md-2 mx-auto">
+                    <h5 class="text-uppercase font-weight-bold mb-4" style="color:white">Django</h5>
+                    <ul class="list-unstyled">
+
+                    </ul>
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <hr>
+
+        
+
+
+        
+        <div class="footer-copyright py-3 text-center">
+            <div class="container-fluid">
+                © 2018 Copyright: <a href='/' style="color:white"> FLASHCARDS </a>
+
+            </div>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+
+    <!-- Tooltips -->
+    <script type="text/javascript" src="../../js/popper.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="../../js/mdb.min.js"></script>
+    <script>
+
+         // SideNav Initialization
+        $(".button-collapse").sideNav();
+        
+        new WOW().init();
+    
+    </script>
+
+
+
+<style>
+#me{
+  background-image: url("https://res.cloudinary.com/rpafurongcloud/image/upload/v1496706843/home3_de7hny.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+#me p{
+  color: #fff ;
+}
+
+
+
+</style>
+</body>
+
+</html>
+
+
+      {% endblock %}
