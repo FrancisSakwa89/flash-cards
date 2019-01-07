@@ -31,3 +31,25 @@ def card(request, id):
   
   card = card.objects.get(pk=id)
   return render(request, 'card.html',{'profile':profile,'card':card})
+
+
+def Newcard(request):
+  frank = request.user.id
+  profile = Profile.objects.get(user=frank)
+  current_user = request.user
+  current_username = request.user.username
+
+  if request.method == 'POST':
+    form = NewcardForm(request.POST, request.FILES)
+    if form.is_valid():
+      card = form.save(commit=False)
+      card.owner = current_user
+      card.user = current_username
+      card.card = profile.card
+      card.save()
+    return redirect('card')
+
+  else:
+    form = NewcardForm()
+
+  return render(request, 'Newcard.html',{'form':form,'profile':profile})
